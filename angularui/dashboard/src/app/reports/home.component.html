@@ -1,0 +1,35 @@
+<!-- <div *ngFor = "let report of reports">
+
+  <p-card title="{{report.reports}}" [style]="{width: '420px'}">
+    <div>{{report.description}}</div>
+
+      <p-button label="Open" (onClick)="handleClick(report._id)" ></p-button>
+
+
+  </p-card>
+</div> -->
+
+
+<p-dataView [value]="reports">
+  <ng-template let-report pTemplate="listItem">
+    <div class="ui-g" style="padding: 2em;border-bottom: 1px solid #d9d9d9">
+     <!-- <div class="ui-g-12 ui-md-3" style="text-align:center">
+        <img src="assets/showcase/images/demo/car/{{car.brand}}.png">
+      </div> -->
+      <div class="ui-g-12 ui-md-8 car-details">
+        <div class="ui-g">
+          <div class="ui-g-2 ui-sm-6">Name: </div>
+          <div class="ui-g-10 ui-sm-6"><b>{{report.description}}</b></div>
+
+          <div class="ui-g-2 ui-sm-6">Description: </div>
+          <div class="ui-g-10 ui-sm-6"><b>{{report.description}}</b></div>
+
+        </div>
+      </div>
+      <div class="ui-g-12 ui-md-1 search-icon">
+        <p-button label="Open" (onClick)="handleClick(report.reports)" ></p-button>
+      </div>
+    </div>
+
+  </ng-template>
+</p-dataView>

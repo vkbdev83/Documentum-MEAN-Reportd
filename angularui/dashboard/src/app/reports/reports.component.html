@@ -1,0 +1,7 @@
+<div style="height:600px;width:1000px;"> <p-growl [value]="msgs"></p-growl>
+<p-chart type="bar" [data]="data" (onDataSelect)="selectData($event)"></p-chart>
+</div>
+<p-dataTable [value]="reportsData">
+  <p-column *ngFor="let col of reportKeys" [field]="col.key" [header]="col.key"> </p-column>
+</p-dataTable>
+

@@ -1,0 +1,10 @@
+<p-menubar >
+  <input type="text" pInputText placeholder="Search">
+  <button pButton label="Logout" icon="fa-sign-out"></button>
+</p-menubar>
+<p-panel>
+  <button pButton type="button" icon="fa-list" label="Reports List" class="ui-button-success" (click)="navigate('reports')"></button>
+  <button pButton type="button" icon="fa-plus" label="Add New Reports" class="ui-button-info" (click)="navigate('addnew')"></button>
+  <button pButton type="button" icon="fa-list" label="User Management" class="ui-button-success" (click)="navigate('usermgmt')" ></button>
+</p-panel>
+<router-outlet></router-outlet>

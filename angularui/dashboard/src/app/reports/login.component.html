@@ -1,0 +1,11 @@
+<div class="ui-inputgroup">
+  <h3 class="first">UserName</h3>
+  <input type="text" pInputText [(ngModel)]="userName" />
+</div>
+
+<div class="ui-inputgroup">
+  <h3 class="first">Password</h3>
+  <input pPassword type="password" [(ngModel)]="ticket"/>
+</div>
+
+<button pButton type="button" label="Login" (click)="performLogin()" ></button>
